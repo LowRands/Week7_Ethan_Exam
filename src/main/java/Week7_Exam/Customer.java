@@ -1,13 +1,22 @@
 package Week7_Exam;
 
 public class Customer {
-    private String Name;
-    private String CustomerID, Email, PhoneNo;
-    public Customer(String name, String customerID, String email, String phoneNum) {
-        Name = name;
+    private String Name, CustomerID, Email, PhoneNo;
+
+    public void setCustomerID(String customerID) {
         CustomerID = customerID;
+    }
+    public void setEmail(String email) {
         Email = email;
+    }
+    public void setPhoneNo(String phoneNum) {
         PhoneNo = phoneNum;
+    }
+    public void setName(String customerName) {
+        Name = customerName;
+    }
+    public String getPhoneNo() {
+        return PhoneNo;
     }
     public String getName() {
         return Name;
@@ -18,4 +27,5 @@ public class Customer {
     public String getEmail() {
         return Email;
     }
+
 }
