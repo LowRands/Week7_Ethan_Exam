@@ -13,7 +13,7 @@ public class CustomerManagement {
             Customer.add(Customer1);
 
 
-            for (int i = 1; i >= 1; i++) {
+            for (int i = 0; i >= 0; i++) {
             System.out.println("===== Customer Management System =====\n1) Add Customer\n2) Update Customer\n3) Display All\n4) Exit");
             int choice = input.nextInt();
             switch (choice) {
@@ -31,7 +31,6 @@ public class CustomerManagement {
 
                 case 2:
                     System.out.println("Enter Customer ID: ");
-                    int CustomerID = input.nextInt();
                     for (Customer C : Customer) {
                         if (C.getCustomerID().equals(input.next())) {
                             System.out.println("Customer ID: " + C.getCustomerID());
@@ -45,16 +44,20 @@ public class CustomerManagement {
                             Customer1.setPhoneNo(input.next());
                             Customer.add(Customer1);
                             System.out.println("Customer updated successfully!");
+                            break;
+
                         } else {
                             System.out.println("Customer hasn't been recorded");
+                            break;
+
                         }
                     }
-                    break;
                 case 3:
                     System.out.println("Customer List:");
                     for (Customer C : Customer) {
-                        System.out.println("Customer ID: " + C.getCustomerID() + "\nName: " + C.getName() + "\nEmail: " + C.getEmail() + "\nPhone: " + C.getPhoneNo());
-                    }
+
+
+                    System.out.printf("Customer ID: " + C.getCustomerID() + "\nCustomer Name: "  + C.getName() + "\nEmail:" + C.getEmail() + "\nPhone: " + C.getPhoneNo());}
                     break;
                 case 4:
                     System.out.println("Exiting");

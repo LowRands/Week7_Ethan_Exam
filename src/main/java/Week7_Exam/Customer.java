@@ -28,4 +28,9 @@ public class Customer {
         return Email;
     }
 
+    @Override
+    public String toString() {
+        System.out.printf("Customer ID: " + getCustomerID() + "\nCustomer Name: "  + getName() + "\nEmail:" + getEmail() + "\nPhone: " + getPhoneNo());
+        return super.toString();
+    }
 }
